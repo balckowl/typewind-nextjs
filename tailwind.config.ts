@@ -1,11 +1,11 @@
 import type { Config } from "tailwindcss";
+import { typewindTransforms } from "typewind/dist/transform.mjs";
 
 const config: Config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: {
+    files: ['./src/**/*.{js,jsx,ts,tsx}'],
+    transform: typewindTransforms,
+  },
   theme: {
     extend: {
       colors: {
